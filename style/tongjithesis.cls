@@ -122,6 +122,7 @@
 	\hb@xt@\@tempdimb{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
 \makeatother
 % 在上述修改基础上，符合模板标题对齐要求
+\setcounter{tocdepth}{2} % 只显示到二级标题
 \renewcommand{\cftdot}{$\cdot$}
 \renewcommand{\cftdotsep}{1}
 \setlength{\cftsecindent}{0em} % 符合毕业设计模板（理工类）一级标题顶格要求

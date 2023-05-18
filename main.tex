@@ -19,6 +19,12 @@
 % \renewcommand{\MintedPygmentize}{\myPython\space -m pygments}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\myPython}{C:/software/Anaconda3/envs/latex/python.exe}
+% \newcommand{\myPython}{C:/Users/didik/anaconda3/envs/latex/python.exe}
+\renewcommand{\MintedPygmentize}{\myPython\space -m pygments}
+
+\DeclareSIUnit{\Hu}{Hu}
+
 \begin{document}
 
 \input{sections/frontcover.tex}
@@ -32,7 +38,7 @@
 \makeatother
 
 \pagestyle{firststyle}
-\input{sections/00_abstract.tex}
+\input{sections/abstract.tex}
 
 \makeatletter
 \@ifclasswith{tongjithesis}{twoside}{%
@@ -53,15 +59,17 @@
 \makeatother
 
 \pagestyle{mainstyle}
-\input{sections/01_intro}
+\input{sections/1}
 \clearpage
-\input{sections/02_math}
+\input{sections/2}
 \clearpage
-\input{sections/03_reference}
+\input{sections/3}
 \clearpage
-\input{sections/04_float}
+\input{sections/4}
 \clearpage
-\input{sections/05_conclusion}
+\input{sections/-2}
+\clearpage
+\input{sections/-1}
 \clearpage
 
 \phantomsection % 添加占位符章节
