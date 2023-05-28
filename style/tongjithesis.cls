@@ -129,7 +129,7 @@
    \fancyhf{}
    \pagenumbering{Roman}                    	% 页数使用罗马数字
    \fancyhead[L]{\qquad \includegraphics[height=1.14cm]{figures/tongji.pdf}}   %页眉左侧插入同济大学logo
-   \fancyhead[R]{\large 毕业设计（论文）~\\}
+   \fancyhead[R]{\large 外文科技文献译文~\\}
    \fancyfoot[C]{\large \thepage}
    \renewcommand{\headrulewidth}{1.8pt}     	% 页眉横线
    \renewcommand{\footrulewidth}{0pt}
@@ -142,7 +142,7 @@
    \fancyhf{}
    \pagenumbering{arabic}
    \fancyhead[L]{\qquad \includegraphics[height=1.14cm]{figures/tongji.pdf}}   %页眉左侧插入同济大学logo
-   \fancyhead[R]{\large 毕业设计（论文）~\\}
+   \fancyhead[R]{\large 外文科技文献译文~\\}
    \fancyfoot[R]{{\large 共\quad \pageref{LastPage}\quad 页\quad 第\quad \thepage \quad 页}} %偶数页左侧(LE)，奇数页右侧(RO)标页码，oneside打印只用写RO
    \renewcommand{\headrulewidth}{1.8pt}     	% 页眉横线
    \renewcommand{\footrulewidth}{1.8pt}     	% 页脚横线
@@ -275,7 +275,7 @@
 			\vskip 30pt
 
 			% 符合毕业设计模板（理工类），标题使用黑体小初
-			\zihao{-0}\heiti{毕业设计（论文）}
+			\zihao{-0}\heiti{外文科技文献译文}
 			\vskip 60pt
 
 			% 符合毕业设计模板（理工类），此处使用黑体小二
