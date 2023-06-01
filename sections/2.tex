@@ -38,7 +38,7 @@
     \item 一个区域 $R$ 被称为同质性，如果$\sigma \leq \sigma_{max}$，其中$\sigma_{max}$是一个给定的同质性阈值。
     \item 拉伸变换（Serra, 1982\cite{serra1982image}）：考虑一个区域 $R$ 和一个邻域 $N$。根据定义，用 $N$ 对 $R$ 进行二元扩张得到的网格点集合 $D$ 是与 $R$ 相交的 $N$ 的平移中心的位置，这个集合用 $D=R \oplus N$ 表示。换言之：$D=\{x \in R |(N+x) \cap R \neq \emptyset\}$。
     \item 侵蚀变换（Serra, 1982\cite{serra1982image}）：根据定义，用 $N$ 对 $R$ 进行二元侵蚀得到的网格点集合 $E$ 是包括在 $R$ 中的 $N$ 的平移中心的位置，这个集合用$E=R \ominus N$表示。换言之：$E=\{x \in R |(N+x) \subset R\}$。
-    \item 收缩（Revol和Jourlin，1997\cite{revol1997new}）：一个区域 $R$ 的 $k收缩$（$k-contraction$）是通过移除所有属于 $R$ 的直方图的 $k极端$ 非空隙的像素来获得的，$k$ 是直方图左边和右边的槽的数量。在本文中，我们使用这个定义的一个特殊情况，即所有被移除的像素都属于直方图的同一侧。我们称它为 $k左收缩$（$k-left-contraction$）或$k右收缩$（$k-right-contraction$）。
+    \item 收缩（Revol和Jourlin，1997\cite{revol1997new}）：一个区域 $R$ 的 $k$ 收缩（$k$-contraction）是通过移除所有属于 $R$ 的直方图的 $k$ 极端 非空隙的像素来获得的，$k$ 是直方图左边和右边的槽的数量。在本文中，我们使用这个定义的一个特殊情况，即所有被移除的像素都属于直方图的同一侧。我们称它为 $k$ 左收缩（$k$-left-contraction）或 $k$ 右收缩（$k$-right-contraction）。
     \item $RG(\sigma_{max}, \{S1,\dots,Sn\})$: 用 $\sigma_{max}$ 和 $\{S1,\dots,Sn\}$ 初始种子集得到的区域生长分割结果。为简单起见，下文将用 $R(\sigma_{max})$ 表示。
 \end{itemize}
 
