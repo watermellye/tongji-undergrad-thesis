@@ -18,15 +18,14 @@ $f_{a}(\sigma_{max})$ 的目的是评估区域生长序列中每个元素的分�
 Kohler（1981）\cite{kohler1981segmentation}提出了一种基于以下启发式的自动阈值方法：对比度越高的边界，越有可能对应于图像中真正的不连续（注意，这种启发式的方法在强对比的纹理图像背景下并不适用）。因此，最佳阈值取决于与该阈值相关的边界中最强的对比度。在我们的应用中，我们概括了Kohler的方法，并提出了 $f_{a}(\sigma_{max})$ 的三个定义，以评估分割后区域边界的质量。
 
 $w_1(\sigma_{max})$ 基于对数图像处理（LIP）对比。Jourlin和Pinoli（1989）\cite{jourlin1989contrast}引入了一个新的数学模型，称为对数图像处理（LIP）模型，特别适合于对数图像，如X射线图像。在这种情况下，他们将两个像素之间的LIP对比度定义如下：
-
 \begin{equation}
-    \dots
+    c_f(x,y)=\frac{|f(x)-f(y)|}{1-\frac{min(f(x)-f(y))}{M}}
 \end{equation}
 其中 $f$ 是灰阶函数，$M$ 是使得 $2^n$ 严格高于灰阶范围的最低值（例如，如果像素以8比特编码，$M=256$）。
 
 我们定义 $w_1(\sigma_{max})$ 为 $B_{R(\sigma_{max})}$ 的所有过渡对（见\cref{fig:过渡对}）的LIP对比之和，以过渡对总数 $N_{tc}$ 标准化：
 \begin{equation}
-    \dots
+    w_1(\sigma_{max})=\frac{\sum_{x \in B_{R(\sigma_{max})}} \sum_{y \in N_x \atop y \notin R(\sigma_{max})} c_f(x,y) } {N_{tc}}
 \end{equation}
 
 $w_2(\sigma_{max})$ 基于标准差。对于 $B_{R(\sigma_{max})}$ 的每个像素 $x$ ，计算x和其不属于分割区域 $R(\sigma_{max})$ 的相邻像素（见\cref{fig:邻域}）的标准差，表示为ξ(x)。设 $n$ 为邻居的数量。
@@ -34,7 +33,7 @@ $w_2(\sigma_{max})$ 基于标准差。对于 $B_{R(\sigma_{max})}$ 的每个像�
 我们将 $w_2(\sigma_{max})$ 定义为所有 $\xi (x)$ 的总和，被 $Card\{B_{R(\sigma_{max})}\}$（即：属于 $B_{R(\sigma_{max})}$ 的像素总数）标准化：
 
 \begin{equation}
-    \dots
+    w_2(\sigma_{max})=\frac{\sum_{x \in B_{R(\sigma_{max})}}}{Card\{B_R(\sigma_{max})\}}
 \end{equation}
 
 $w_3(\sigma_{max})$ 基于过渡水平。我们定义 $w_3(\sigma_{max})$ 为所有过渡对的过渡水平之和（见\cref{fig:过渡对}），被 $N_{tc}$ 标准化：
