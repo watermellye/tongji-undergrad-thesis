@@ -3,3 +3,35 @@
 
 在这个附录中，我们推导出本文公式（6）中给出的熵的表达式。
 
+\begin{equation*}
+    \begin{aligned}
+S(\sigma_{\text{max}}) =
+& - \sum_{i=0}^{ng} p_{i_R} \ln p_{i_R} - \sum_{i=0}^{ng} p_{i_{\overline{R}}} \ln p_{i_{\overline{R}}}
+\\
+\text{with } & p_{i_R} = \frac{H_R[i]}{\text{Card}\{R(\sigma_{\text{max}})\}} \text{ and } p_{i_{\overline{R}}} = \frac{H_{\overline{R}}[i]}{\text{Card}\{\overline{R}(\sigma_{\text{max}})\}}
+\\
+\text{with } & H_R \text{ and } H_{\overline{R}} \text{ histograms of } R(\sigma_{\text{max}}) \text{ and } \overline{R}(\sigma_{\text{max}})
+\\
+S(\sigma_{\text{max}}) =
+& - \frac{1}{\text{Card}\{R(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_R[i]\ln(H_R[i])
+- \frac{1}{\text{Card}\{\overline{R}(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_{\overline{R}}[i]\ln(H_{\overline{R}}[i])
+\\
+& + \frac{1}{\text{Card}\{R(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_R[i]\ln(\text{Card}\{R(\sigma_{\text{max}})\})
++ \frac{1}{\text{Card}\{\overline{R}(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_{\overline{R}}[i]\ln(\text{Card}\{\overline{R}(\sigma_{\text{max}})\})
+\\
+S(\sigma_{\text{max}}) =
+& - \frac{1}{\text{Card}\{R(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_R[i]\ln(H_R[i])
+- \frac{1}{\text{Card}\{\overline{R}(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_{\overline{R}}[i]\ln(H_{\overline{R}}[i])
+\\
+& + \ln(\text{Card}\{R(\sigma_{\text{max}})\}) + \ln(\text{Card}\{\overline{R}(\sigma_{\text{max}})\})
+\\
+S(\sigma_{\text{max}}) =
+& - \frac{1}{\text{Card}\{R(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_R[i]\ln(H_R[i])
+- \frac{1}{\text{Card}\{\overline{R}(\sigma_{\text{max}})\}} \sum_{i=0}^{ng}H_{\overline{R}}[i]\ln(H_{\overline{R}}[i])
+\\
+& + \ln(\text{Card}\{R(\sigma_{\text{max}})\} \cdot \text{Card}\{\overline{R}(\sigma_{\text{max}})\})
+.
+    \end{aligned}
+\end{equation*}
+
+%    \, \text{with} \, H_R \, and \, H_{\overline{R}} \, \text{histograms of} \, R(\sigma_{\text{max}}) \, \text{and} \, \overline{R}(\sigma_{\text{max}}).
